@@ -82,20 +82,19 @@ i = 5
 #     print(num)
 
 #3.
-# user_odd_num = input("type an odd number less than 50 ")
-# if not user_odd_num.isdigit():
-#     print("Not a number!!")
-# elif int(user_odd_num) > 50:
-#     print("Can you not read?? PICK A NUMBER LESS THAN 50!!")
-# elif int(user_odd_num) % 2 == 0:
-#     print("this is an even number!! I said type an ODD number!")
-# else:
-#     for num in range(1, 50):
-#         if num == int(user_odd_num):
-#             print(f"Yikes! skiping number: {user_odd_num}")
-#             continue
-#         if num % 2 != 0:
-#             print(num)
+user_odd_num = input("type an odd number less than 50 ")
+if not user_odd_num.isdigit():
+    print("Not a number!!")
+elif int(user_odd_num) > 50:
+    print("Can you not read?? PICK A NUMBER LESS THAN 50!!")
+elif int(user_odd_num) % 2 == 0:
+    print("this is an even number!! I said type an ODD number!")
+else:
+    for num in range(1, 50, 2):
+        if num == int(user_odd_num):
+            print(f"Yikes! skipping number: {user_odd_num}")
+            continue
+        print(num)
 
 #3. FIZZ BUZZ
 
@@ -111,49 +110,55 @@ i = 5
 
 #4. Display Table of Powers
 
+# get_number = int(input("pick a number "))
+# print("number", '|', "squared", '|', "cubed")
+# print('------', '------','------')
+# for num in range(1, get_number + 1):
+#     print(num, '     |', num**2, '     |', num**3)
+
 #5. LETTER GRADES
 # get_letter_grade = True
-#
+
 # while get_letter_grade:
 #     your_grade = int(input("Put in your number for letter grade "))
 #     if your_grade >= 88:
 #         print("A")
-#     elif your_grade <= 87 and your_grade >= 80:
+#     elif your_grade >= 80:
 #         print('B')
-#     elif your_grade <= 79 and your_grade >= 67:
+#     elif your_grade >= 67:
 #         print("C")
-#     elif your_grade <= 66 and your_grade >= 60:
+#     elif your_grade >= 60:
 #         print("D")
 #     else: print("F")
-#     quit = input("Would you like to continue? Type 'y' or 'n' ")
-#     if quit == "n":
+#     quit = input("Would you like to quit? Type 'y' or 'n' ")
+#     if quit == "y":
 #         get_letter_grade = False
 
 #6. DICTIONARIES
+#
+# def create_book_dict(T, A, G):
+#     return dict(Title = T, Author = A, Genre = G)
 
-def create_book_dict(T, A, G):
-    return dict(Title = T, Author = A, Genre = G)
-
-
-Harry_Potter = create_book_dict("Harry Potter And The Sorcerer's Stone", "JK Rowling", "Fantasy")
-The_Hunger_Games = create_book_dict("The Hunger Games", "Suzanne Collins", "Post Apocalypse")
-Gregor_the_Overlander = create_book_dict("Gregor The Overlander", "Suzanne Collins", "Fantasy")
-
-book_list = []
-book_list.append(Harry_Potter)
-book_list.append(The_Hunger_Games)
-book_list.append(Gregor_the_Overlander)
-
-for book in book_list:
-    print(book)
-
-genre = input("The genre's I've read are  Fantasy, Post Apocalypse' choose a genre. ")
-for book in book_list:
-    if genre != book["Genre"]:
-        pass
-    elif genre == book["Genre"]:
-        print(book["Title"])
-
-    else: print("sorry I haven't read that genre")
+#
+# Harry_Potter = create_book_dict("Harry Potter And The Sorcerer's Stone", "JK Rowling", "Fantasy")
+# The_Hunger_Games = create_book_dict("The Hunger Games", "Suzanne Collins", "Post Apocalypse")
+# Gregor_the_Overlander = create_book_dict("Gregor The Overlander", "Suzanne Collins", "Fantasy")
+#
+# book_list = []
+# book_list.append(Harry_Potter)
+# book_list.append(The_Hunger_Games)
+# book_list.append(Gregor_the_Overlander)
+#
+# for book in book_list:
+#     print(book)
+#
+# genre = input("The genre's I've read are  Fantasy, Post Apocalypse' choose a genre. ")
+# for book in book_list:
+#     if genre != book["Genre"]:
+#         pass
+#     elif genre == book["Genre"]:
+#         print(book["Title"])
+#
+#     else: print("sorry I haven't read that genre")
 
 
