@@ -82,20 +82,27 @@ i = 5
 #     print(num)
 
 #3.
-user_odd_num = input("type an odd number less than 50 ")
-if not user_odd_num.isdigit():
-    print("Not a number!!")
-elif int(user_odd_num) > 50:
-    print("Can you not read?? PICK A NUMBER LESS THAN 50!!")
-elif int(user_odd_num) % 2 == 0:
-    print("this is an even number!! I said type an ODD number!")
-else:
-    for num in range(1, 50, 2):
-        if num == int(user_odd_num):
-            print(f"Yikes! skipping number: {user_odd_num}")
-            continue
-        print(num)
-
+while True:
+    user_odd_num = input("type an odd number less than 50 ")
+    if not user_odd_num.isdigit():
+        print("Not a number!!")
+        continue
+    elif int(user_odd_num) > 50:
+        print("Can you not read?? PICK A NUMBER LESS THAN 50!!")
+        continue
+    elif int(user_odd_num) % 2 == 0:
+        print("this is an even number!! I said type an ODD number!")
+        continue
+    else:
+        for num in range(1, 50, 2):
+            if num == int(user_odd_num):
+                print(f"Yikes! skipping number: {user_odd_num}")
+                continue
+            print(num)
+    go_again = input("would you like to continue?")
+    if go_again == 'n':
+        break
+    
 #3. FIZZ BUZZ
 
 # for num in range(1, 101):
