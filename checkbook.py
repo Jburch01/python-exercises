@@ -13,10 +13,17 @@ def run_atm():
             view()
         elif question == '2':
             amount = input("How much would you like to withdraw? ")
-            withdraw(float(amount))
+            if check_input(amount):
+                withdraw(float(amount))
+            else:
+                print("Please put input a number\n")
         elif question == '3':
-            amount = input("How much would you like to deposit? ")
-            deposit(float(amount))
+            amount = (input("How much would you like to deposit? "))
+            if check_input(amount):
+                deposit(float(amount))
+            else:
+                print("Please put input a number\n")
+
         elif question == '4':
             balance = get_balance()
             print(f"Your ending balance is: {balance} \n Thanks have a good day! Goodbye")
